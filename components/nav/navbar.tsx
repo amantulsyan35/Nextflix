@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import styles from './navbar.module.css';
 import { magic } from '../../lib/magic-client';
 
@@ -20,13 +19,14 @@ const Navbar = () => {
   };
 
   const handleShowDropdown = () => {
-    setShowDropdown((state) => !state);
+    setShowDropdown((state: boolean) => !state);
   };
 
   useEffect(() => {
     (async () => {
       try {
         const { email } = magic.user.getMetaData();
+        const didToken = await magic.user.getIdToken();
         if (email) {
           setUsername(email);
         }
