@@ -43,10 +43,9 @@ const Card = ({
         <Image
           src={imgSrc}
           alt='image'
-          width={300}
-          height={300}
-          onError={handleOnError}
           layout='fill'
+          onError={handleOnError}
+          className={styles.cardImg}
         />
       </motion.div>
     </div>
