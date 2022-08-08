@@ -25,7 +25,7 @@ export async function getServerSideProps(context: any) {
       },
     };
   }
-  const watchItAgainVideos = await getWatchItAgainVideos(userId, token);
+  // const watchItAgainVideos = await getWatchItAgainVideos(userId, token);
 
   const disneyVideos = await getVideos('disney trailer');
   const productivityVideos = await getVideos('Productivity');
@@ -39,7 +39,7 @@ export async function getServerSideProps(context: any) {
       travelVideos,
       productivityVideos,
       popularVideos,
-      watchItAgainVideos,
+      // watchItAgainVideos,
     },
   };
 }
@@ -69,11 +69,11 @@ export default function Home({
 
         <div className={styles.sectionWrapper}>
           <SectionCards title='Disney' videos={disneyVideos} size='large' />
-          <SectionCards
+          {/* <SectionCards
             title='Watch it again'
             videos={watchItAgainVideos}
             size='small'
-          />
+          /> */}
           <SectionCards title='Travel' videos={travelVideos} size='small' />
           <SectionCards
             title='Productivity'

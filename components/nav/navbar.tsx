@@ -67,9 +67,9 @@ const Navbar = () => {
           <li onClick={handleOnClickHome} className={styles.navItem}>
             Home
           </li>
-          <li onClick={handleOnClickMyList} className={styles.navItem2}>
+          {/* <li onClick={handleOnClickMyList} className={styles.navItem2}>
             My List
-          </li>
+          </li> */}
         </ul>
         <nav className={styles.navContainer}>
           <div>
